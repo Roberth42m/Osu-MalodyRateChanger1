@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>osu! Rate Changer</title>
+</head>
+
+<body>
+
+    <h1>osu! / Malody Rate Changer</h1>
+
+    <form
+        action="/convert"
+        method="POST"
+        enctype="multipart/form-data"
+    >
+
+        <p>Map File (.osz or .osu)</p>
+
+        <input
+            type="file"
+            name="map_file"
+            required
+        >
+
+        <br><br>
+
+        <p>Audio File</p>
+
+        <input
+            type="file"
+            name="audio_file"
+            required
+        >
+
+        <br><br>
+
+        <p>Mode</p>
+
+        <select name="mode">
+
+            <option value="rate">
+                Rate
+            </option>
+
+            <option value="bpm">
+                BPM
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <p>Rate</p>
+
+        <input
+            type="number"
+            step="0.01"
+            name="rate"
+            value="1.10"
+        >
+
+        <br><br>
+
+        <p>Target BPM</p>
+
+        <input
+            type="number"
+            step="0.1"
+            name="bpm"
+            placeholder="220"
+        >
+
+        <br><br>
+
+        <label>
+
+            <input
+                type="checkbox"
+                name="keep_pitch"
+                checked
+            >
+
+            Keep Pitch
+
+        </label>
+
+        <br><br>
+
+        <button type="submit">
+            Convert
+        </button>
+
+    </form>
+
+</body>
+
+</html>

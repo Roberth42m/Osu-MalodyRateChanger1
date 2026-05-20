@@ -1,0 +1,4 @@
+flask
+reamber
+pydub
+werkzeug
