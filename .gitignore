@@ -1,0 +1,7 @@
+__pycache__/
+outputs/
+uploads/
+*.pyc
+*.osz
+*.mp3
+*.ogg
